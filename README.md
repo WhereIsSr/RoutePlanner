@@ -39,7 +39,7 @@ win+R输入cmd打开命令行界面
 为了让你更好的理解这个程序是如何工作的,下面将介绍它的原理:    
 
 **1. 加载地图数据**       
-我们的数据来源是OpenStreetMap(https://www.openstreetmap.org),相信你在新生课或者GIS原理课上已经接触过这个网站,在网站的上方有一个导出按钮,可以将目前屏幕显示的区域导出为OSM文件,OSM文件采用的是XML语言,我们利用pugi将其解析出来      
+我们的数据来源是OpenStreetMap(https://www.openstreetmap.org), 相信你在新生课或者GIS原理课上已经接触过这个网站,在网站的上方有一个导出按钮,可以将目前屏幕显示的区域导出为OSM文件,OSM文件采用的是XML语言,我们利用pugi将其解析出来      
 **解析出来的数据的储存结构(data.h)如下(伪代码)：  
 点：struct Node {x, y}   
 线：struct Way { Node 的集合 }
