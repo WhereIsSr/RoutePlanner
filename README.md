@@ -43,11 +43,11 @@ win+R输入cmd打开命令行界面
 在这个程序中,你可以看到,已经有了一个map.osm,这我导出的中南大学南校区的地图,你可以继续用它,也可以自己去导出其他地图然后替换它,不要忘记程序中的路径一致~    
 **解析出来的数据的储存结构(data.h)如下(伪代码)：  
 点：struct Node {x, y}   
-线：struct Way { Node 的集合 }
-路：struct Road {way 的索引, type }
-面：struct Multipolygon { 内边界:点的集合, 外边界:点的集合}
-若干不同种类的面继承面的结构
-以上是基本的数据类型,除了了解他们之外,你还需要了解你在实现算法时能够访问的数据:     
+线：struct Way { Node 的集合 }   
+路：struct Road {way 的索引, type }    
+面：struct Multipolygon { 内边界:点的集合, 外边界:点的集合}   
+若干不同种类的面继承面的结构    
+以上是基本的数据类型,除了了解他们之外,你还需要了解你在实现算法时能够访问的数据:      
 在Algorithm类中地图数据都储存在a_data中,比如我们可以用a_data->Nodes()[index]访问索引为index的点,用a_data->Ways()[index]访问索引为index的路,以此类推......**
 
 **2. 获取起始点和终点坐标**     
